@@ -38,7 +38,7 @@ const CreateList = () => {
       status,
     };
     console.log(task);
-    await axiosPublic.post("/list", task).then((res) => {
+    await axiosPublic.post("/lists", task).then((res) => {
       if (res.data.insertedId) {
         navigate("/dashboard/toDoList");
         loginSuccessToast();

@@ -1,7 +1,38 @@
 import PropTypes from "prop-types";
 import { MdDateRange } from "react-icons/md";
+import useAxiosPublic from "../../Hook/useAxiosPublic";
+import Swal from "sweetalert2";
+import useTask from "../../Hook/useTask";
+import toast from "react-hot-toast";
 const Card = ({ item }) => {
-  const { title, description, date, priority, email, status } = item || {};
+  const deleteSuccessToast = () => toast.success("Delete successfully");
+  const deleteErrorToast = () => toast.error("Something went wrong");
+  const { title, description, date, priority, status, _id } = item || {};
+  const axiosPublic = useAxiosPublic();
+  const { refetch } = useTask(status);
+  const handleDelete = () => {
+    Swal.fire({
+      title: "Are you sure?",
+      text: "You won't be able to revert this!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, delete it!",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        axiosPublic.delete(`/lists/${_id}`).then((res) => {
+          if (res.data.deletedCount > 0) {
+            deleteSuccessToast()
+            refetch();
+          }
+          else{
+            deleteErrorToast()
+          }
+        });
+      }
+    });
+  };
   return (
     <div className="flex justify-between items-center gap-5 p-5 border shadow-lg mt-5">
       <div className="flex-1">
@@ -13,6 +44,9 @@ const Card = ({ item }) => {
           </p>
           <p>Priority: {priority}</p>
         </div>
+      </div>
+      <div className="">
+        <button onClick={handleDelete}>delete</button>
       </div>
     </div>
   );

@@ -13,7 +13,7 @@ const useTask = (status) => {
   } = useQuery({
     queryKey: ["task",user?.email, status],
     queryFn: async () => {
-      const res = await axiosPublic.get(`/list?email=${user?.email}&status=${status}`);
+      const res = await axiosPublic.get(`/lists?email=${user?.email}&status=${status}`);
       return res.data;
     },
   });
