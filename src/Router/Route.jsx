@@ -6,11 +6,11 @@ import DashboardLayout from "../Layout/DashboardLayout";
 import Login from "../Pages/Authentication/Login/Login";
 import Registration from "../Pages/Authentication/Registration/Registration";
 import Profile from "../Pages/Dashboard/Profile/Profile";
-import Create from "../Pages/Dashboard/Create/Create";
 import ToDoList from "../Pages/Dashboard/ToDoList/ToDoList";
 import OngoingList from "../Pages/Dashboard/OngoingList/OngoingList";
 import CompletedList from "../Pages/Dashboard/CompletedList/CompletedList";
 import PrivateRoute from "./PrivateRoute";
+import CreateList from "../Pages/Dashboard/CreateList/CreateList";
 
 const Route = createBrowserRouter([
   {
@@ -26,7 +26,11 @@ const Route = createBrowserRouter([
   },
   {
     path: "/dashboard",
-    element: <PrivateRoute><DashboardLayout /></PrivateRoute>,
+    element: (
+      <PrivateRoute>
+        <DashboardLayout />
+      </PrivateRoute>
+    ),
     errorElement: <ErrorPage />,
     children: [
       {
@@ -41,7 +45,7 @@ const Route = createBrowserRouter([
         path: "/dashboard/create",
         element: (
           <PrivateRoute>
-            <Create />
+            <CreateList />
           </PrivateRoute>
         ),
       },
