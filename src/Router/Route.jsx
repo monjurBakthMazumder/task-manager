@@ -11,6 +11,8 @@ import OngoingList from "../Pages/Dashboard/OngoingList/OngoingList";
 import CompletedList from "../Pages/Dashboard/CompletedList/CompletedList";
 import PrivateRoute from "./PrivateRoute";
 import CreateList from "../Pages/Dashboard/CreateList/CreateList";
+import UpdateList from "../Pages/Dashboard/UpdateList/UpdateList";
+import DetailsList from "../Pages/Dashboard/DetailsList/DetailsList";
 
 const Route = createBrowserRouter([
   {
@@ -46,6 +48,22 @@ const Route = createBrowserRouter([
         element: (
           <PrivateRoute>
             <CreateList />
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "/dashboard/update/:id",
+        element: (
+          <PrivateRoute>
+            <UpdateList />
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "/dashboard/details/:id",
+        element: (
+          <PrivateRoute>
+            <DetailsList />
           </PrivateRoute>
         ),
       },

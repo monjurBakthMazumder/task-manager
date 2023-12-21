@@ -1,9 +1,10 @@
 import PropTypes from "prop-types";
-import { MdDateRange } from "react-icons/md";
+import { MdDateRange, MdDelete, MdEdit, MdRemoveRedEye } from "react-icons/md";
 import useAxiosPublic from "../../Hook/useAxiosPublic";
 import Swal from "sweetalert2";
 import useTask from "../../Hook/useTask";
 import toast from "react-hot-toast";
+import { Link } from "react-router-dom";
 const Card = ({ item }) => {
   const deleteSuccessToast = () => toast.success("Delete successfully");
   const deleteErrorToast = () => toast.error("Something went wrong");
@@ -23,11 +24,10 @@ const Card = ({ item }) => {
       if (result.isConfirmed) {
         axiosPublic.delete(`/lists/${_id}`).then((res) => {
           if (res.data.deletedCount > 0) {
-            deleteSuccessToast()
+            deleteSuccessToast();
             refetch();
-          }
-          else{
-            deleteErrorToast()
+          } else {
+            deleteErrorToast();
           }
         });
       }
@@ -45,8 +45,16 @@ const Card = ({ item }) => {
           <p>Priority: {priority}</p>
         </div>
       </div>
-      <div className="">
-        <button onClick={handleDelete}>delete</button>
+      <div className="flex flex-col items-center gap-3 text-3xl">
+        <button onClick={handleDelete}>
+          <MdDelete className="text-red-600 border-red-600 hover:border-red-700 hover:text-red-700 border p-[2px] rounded-sm" />
+        </button>
+        <Link to={`/dashboard/update/${_id}`}>
+          <MdEdit className="text-blue-600 border-blue-600 hover:border-blue-700 hover:text-blue-700 border p-[2px] rounded-sm" />
+        </Link>
+        <Link to={`/dashboard/details/${_id}`}>
+          <MdRemoveRedEye className="text-blue-600 border-blue-600 hover:border-blue-700 hover:text-blue-700 border p-[2px] rounded-sm" />
+        </Link>
       </div>
     </div>
   );
