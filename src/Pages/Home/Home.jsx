@@ -1,10 +1,11 @@
 import Banner from "../../Component/Banner/Banner";
+import Who from "../../Component/Who/Who";
 
 const Home = () => {
   return (
     <div>
       <Banner />
-      Home
+      <Who/>
     </div>
   );
 };
