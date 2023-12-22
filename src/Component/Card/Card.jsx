@@ -5,6 +5,7 @@ import Swal from "sweetalert2";
 import useTask from "../../Hook/useTask";
 import toast from "react-hot-toast";
 import { Link } from "react-router-dom";
+import Modal from "./Modal";
 const Card = ({ item }) => {
   const deleteSuccessToast = () => toast.success("Delete successfully");
   const deleteErrorToast = () => toast.error("Something went wrong");
@@ -34,7 +35,7 @@ const Card = ({ item }) => {
     });
   };
   return (
-    <div className="flex justify-between items-center gap-5 p-5 border shadow-lg mt-5">
+    <div className="flex justify-between items-center gap-5 p-5 border shadow-lg mt-5" data-aos="zoom-in">
       <div className="flex-1">
         <h1 className="text-lg md:text-xl lg:text-2xl font-bold">{title}</h1>
         <p className="text-xs md:text-sm lg:text-base">{description}</p>
@@ -44,6 +45,7 @@ const Card = ({ item }) => {
           </p>
           <p>Priority: {priority}</p>
         </div>
+        <Modal item={item}/>
       </div>
       <div className="flex flex-col items-center gap-3 text-3xl">
         <button onClick={handleDelete}>

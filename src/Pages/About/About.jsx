@@ -3,10 +3,10 @@ const About = () => {
     <div className="p-5 md:p-10"
     >
       <div className="w-full max-w-7xl mx-auto">
-        <h1 className="text-3xl sm:text-4xl lg:text-5xl text-center mt-10 font-bold">
+        <h1 className="text-3xl sm:text-4xl lg:text-5xl text-center mt-10 font-bold"  data-aos="zoom-in">
           About us
         </h1>
-        <p className="text-justify my-6">
+        <p className="text-justify my-6"  data-aos="zoom-in">
           Introducing TaskManagerPro, your all-in-one solution for efficient
           task management. In the fast-paced world we live in, staying organized
           and on top of your tasks is crucial for success. TaskManagerPro is
@@ -18,7 +18,7 @@ const About = () => {
           provides a comprehensive overview of all your tasks, deadlines, and
           project progress, giving you a real-time snapshot of your workload.
         </p>
-        <p className="text-justify my-6">
+        <p className="text-justify my-6"  data-aos="zoom-in">
           TaskManagerPro goes beyond basic task tracking by offering robust
           project management capabilities. Users can create projects, set
           milestones, and assign tasks to team members, ensuring everyone is on
@@ -33,7 +33,7 @@ const About = () => {
           informed about changes, deadlines, and mentions, promoting a
           collaborative and dynamic work environment.
         </p>
-        <p className="text-justify my-6">
+        <p className="text-justify my-6"  data-aos="zoom-in">
           TaskManagerPro understands the importance of time management, and its
           built-in time tracking feature allows users to monitor how much time
           is spent on each task. This not only helps individuals stay focused
@@ -49,7 +49,7 @@ const About = () => {
           creative assets or a software development project with specific
           technical requirements, TaskManagerPro can accommodate your needs.
         </p>
-        <p className="text-justify my-6">
+        <p className="text-justify my-6"  data-aos="zoom-in">
           Security is a top priority for TaskManagerPro. The platform employs
           robust encryption protocols to ensure the confidentiality and
           integrity of your data. With role-based access controls,

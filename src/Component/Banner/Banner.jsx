@@ -6,7 +6,7 @@ const Banner = () => {
     <div className="relative">
       <img src={img} alt="banner" />
       <div className="absolute h-full w-full flex flex-col justify-center items-center top-0 bg-black bg-opacity-50 text-white text-center p-5 md:p-10">
-        <div className=" md:max-w-4xl mx-auto">
+        <div className=" md:max-w-4xl mx-auto"  data-aos="zoom-in">
           <h1 className="text-2xl sm:text-4xl lg:text-5xl text-center font-bold">
             Effortless task mastery begins here
           </h1>

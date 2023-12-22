@@ -43,7 +43,7 @@ const Login = () => {
   };
   return (
     <div className="min-h-screen flex justify-center items-center">
-      <div className="card shrink-0 w-full max-w-xl shadow-2xl bg-base-100 border rounded-sm">
+      <div className="card shrink-0 w-full max-w-xl shadow-2xl bg-base-100 border rounded-sm" data-aos="zoom-in">
         <h1 className="text-3xl sm:text-4xl lg:text-5xl text-center mt-10 font-bold">
           Login now!
         </h1>

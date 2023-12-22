@@ -13,7 +13,7 @@ const Profile = () => {
   ];
   return (
     <div className=" flex flex-col justify-center p-5 md:p-10 text-center">
-      <div className=" flex flex-col justify-center items-center p-5 md:p-10 border shadow-lg">
+      <div className=" flex flex-col justify-center items-center p-5 md:p-10 border shadow-lg"  data-aos="zoom-in">
         <div className=" max-w-[200px] w-full">
           <img
             src={user?.photoURL}
@@ -27,19 +27,19 @@ const Profile = () => {
         <p className="text-lg lg:text-xl  font-bold">{user?.email}</p>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 w-full my-5 md:my-10">
-        <div className="p-5 md:p-10 border shadow-lg">
+        <div className="p-5 md:p-10 border shadow-lg"  data-aos="zoom-in">
           <h1 className="text-6xl sm:text-7xl lg:text-68xl font-bold">
             {stats?.todo}
           </h1>
           <p className="text-lg lg:text-xl ">ToDo list</p>
         </div>
-        <div className="p-5 md:p-10 border shadow-lg">
+        <div className="p-5 md:p-10 border shadow-lg"  data-aos="zoom-in">
           <h1 className="text-6xl sm:text-7xl lg:text-68xl font-bold">
             {stats?.ongoing}
           </h1>
           <p className="text-lg lg:text-xl ">Ongoing list</p>
         </div>
-        <div className="p-5 md:p-10 border shadow-lg">
+        <div className="p-5 md:p-10 border shadow-lg"  data-aos="zoom-in">
           <h1 className="text-6xl sm:text-7xl lg:text-68xl font-bold">
             {stats?.completed}
           </h1>

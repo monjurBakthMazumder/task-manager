@@ -26,7 +26,7 @@ const Contact = () => {
       className=" flex justify-center items-center p-5 md:p-10"
       style={{ "min-height": "calc(100vh - 100px)" }}
     >
-      <div className="card shrink-0 w-full max-w-7xl shadow-2xl bg-base-100 border rounded-sm">
+      <div className="card shrink-0 w-full max-w-7xl shadow-2xl bg-base-100 border rounded-sm"  data-aos="zoom-in">
         <h1 className="text-3xl sm:text-4xl lg:text-5xl text-center mt-10 font-bold">
           Contact us
         </h1>
