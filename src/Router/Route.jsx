@@ -13,6 +13,8 @@ import PrivateRoute from "./PrivateRoute";
 import CreateList from "../Pages/Dashboard/CreateList/CreateList";
 import UpdateList from "../Pages/Dashboard/UpdateList/UpdateList";
 import DetailsList from "../Pages/Dashboard/DetailsList/DetailsList";
+import About from "../Pages/About/About";
+import Contact from "../Pages/Contact/Contact";
 
 const Route = createBrowserRouter([
   {
@@ -23,6 +25,14 @@ const Route = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
+      },
+      {
+        path: "/about",
+        element: <About />,
+      },
+      {
+        path: "/contact",
+        element: <Contact />,
       },
     ],
   },

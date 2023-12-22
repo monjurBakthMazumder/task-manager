@@ -91,7 +91,7 @@ const Registration = () => {
               type="text"
               className="input input-bordered"
             />
-            {errors.email?.message && (
+            {errors.name?.message && (
               <p className="text-xs text-red-600 mt-1">
                 {errors.name?.message}
               </p>
@@ -107,7 +107,7 @@ const Registration = () => {
               type="file"
               className="py-2 input input-bordered"
             />
-            {errors.email?.message && (
+            {errors.photo?.message && (
               <p className="text-xs text-red-600 mt-1">
                 {errors.photo?.message}
               </p>

@@ -7,7 +7,7 @@ import useGetSingleTask from "../../../Hook/useGetSingleTask";
 const UpdateList = () => {
   const axiosPublic = useAxiosPublic();
   const loginSuccessToast = () =>
-    toast.success("Update task create successfully");
+    toast.success("This task update successfully");
   const navigate = useNavigate();
   const id = useParams();
   const { task } = useGetSingleTask(id.id);

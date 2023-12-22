@@ -13,7 +13,7 @@ const Profile = () => {
   ];
   return (
     <div className=" flex flex-col justify-center p-5 md:p-10 text-center">
-      <div className=" flex flex-col justify-center items-center ">
+      <div className=" flex flex-col justify-center items-center p-5 md:p-10 border shadow-lg">
         <div className=" max-w-[200px] w-full">
           <img
             src={user?.photoURL}

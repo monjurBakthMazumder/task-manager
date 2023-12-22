@@ -18,6 +18,26 @@ const Navbar = () => {
       </li>
       <li>
         <NavLink
+          to="/about"
+          className={({ isActive, isPending }) =>
+            isPending ? "pending" : isActive ? "active" : ""
+          }
+        >
+          About
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
+          to="/contact"
+          className={({ isActive, isPending }) =>
+            isPending ? "pending" : isActive ? "active" : ""
+          }
+        >
+          Contact
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
           to="/dashboard/Profile"
           className={({ isActive, isPending }) =>
             isPending ? "pending" : isActive ? "active" : ""
@@ -29,7 +49,7 @@ const Navbar = () => {
     </>
   );
   return (
-    <div className="navbar bg-base-100 border-b border-blue-600">
+    <div className="navbar bg-base-100 border-b-2 mb-2">
       <div className="mr-auto">
         <Link to={"/"} className="text-xl md:text-2xl font-bold">
           Task Manager
