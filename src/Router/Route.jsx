@@ -15,6 +15,7 @@ import UpdateList from "../Pages/Dashboard/UpdateList/UpdateList";
 import DetailsList from "../Pages/Dashboard/DetailsList/DetailsList";
 import About from "../Pages/About/About";
 import Contact from "../Pages/Contact/Contact";
+import Dashboard from "../Pages/Dashboard/Dashboard/Dashboard";
 
 const Route = createBrowserRouter([
   {
@@ -46,7 +47,15 @@ const Route = createBrowserRouter([
     errorElement: <ErrorPage />,
     children: [
       {
-        path: "/dashboard/Profile",
+        path: "/dashboard/dashboard",
+        element: (
+          <PrivateRoute>
+            <Dashboard />
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "/dashboard/profile",
         element: (
           <PrivateRoute>
             <Profile />
