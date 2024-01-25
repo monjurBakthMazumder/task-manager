@@ -25,18 +25,18 @@ const SocialSingIn = () => {
   };
   return (
     <div className=" px-8">
-      <div className="flex flex-wrap justify-center items-center gap-2 mt-5">
+      <div className="flex flex-wrap justify-center items-center gap-2 my-5">
         <button
           onClick={() => handleSocialLogin(singInWithGoogle)}
           type="button"
-          className="btn btn-primary btn-outline flex-1"
+          className="btn btn-primary btn-outline rounded-sm flex-1"
         >
           <FcGoogle className="text-3xl" /> Google
         </button>
         <button
           onClick={() => handleSocialLogin(singInWithGithub)}
           type="button"
-          className="btn btn-primary btn-outline flex-1"
+          className="btn btn-primary btn-outline rounded-sm flex-1"
         >
           <FaGithub className="text-3xl" /> Github
         </button>

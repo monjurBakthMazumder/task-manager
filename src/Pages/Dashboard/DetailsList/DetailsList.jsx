@@ -51,7 +51,7 @@ const DetailsList = () => {
           >
             Back
           </button>
-          <div className="flex justify-between items-center gap-5 p-5 border shadow-lg mt-5">
+          <div className="flex justify-between items-center gap-5 p-5 border shadow-lg mt-5"   data-aos="zoom-in">
             <div className="flex-1">
               <h1 className="text-lg md:text-xl lg:text-2xl font-bold">
                 {title}
