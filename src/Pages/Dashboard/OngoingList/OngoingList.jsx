@@ -11,7 +11,7 @@ const OngoingList = () => {
       ) : (
         <>
           {task?.length < 1 ? (
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold flex justify-center items-center h-screen">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold flex justify-center items-center h-screen  text-center">
               No Ongoing task available
             </h1>
           ) : (
